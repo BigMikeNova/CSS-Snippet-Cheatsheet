@@ -1,0 +1,78 @@
+:root {
+    --dark: rgb(43, 43, 43);
+    --white: #ffffff;
+}
+body {
+    background-color: var(--dark);
+    color: magenta;
+    font-family: sans-serif;
+}
+
+main {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    grid-template-columns: repeat (3, 1fr)
+}
+
+.main-header {
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    padding: 10px;
+}
+
+header>p {
+    color: var(--white);
+}
+
+.code-card {
+    display: column;
+    width: 300px;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+    border-style: dotted;
+    padding: 20px;
+}
+
+.card-header {
+     border-radius: 8px;
+     border-style: solid;
+     padding: 3px;
+     transition: all 0.5s ease-in-out;
+     position: relative;
+     margin-top: -30px;
+     margin-bottom: 10px;
+     background: solid;
+     background-color: var(--dark);
+     font-size: 25px; 
+     font-weight: bold;
+     text-align: center;
+}
+
+.card-descrip {
+    padding: 10px;
+}
+
+.example {
+    color: var(--white);
+    background-image: linear-gradient(rgba(232, 102, 236, 0.3) 0%, rgba(232, 102, 236, 0.6) 100%);
+    flex-wrap: wrap;
+    position: relative;
+    border-radius 8px;
+}
+
+.code-card:hover, 
+.code-card:hover .card-header {
+    box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1); 
+}
+
+@media screen and (max-width: 922px) {
+    main {
+        flex-direction: column;
+    }
+}
